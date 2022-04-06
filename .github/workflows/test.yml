@@ -1,0 +1,19 @@
+name: Test
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  test:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+      - name: Grant execute permission for gradlew
+        run: chmod +x grandlew
+      - name: Run Test with gradle
+        run: ./gradlew test
