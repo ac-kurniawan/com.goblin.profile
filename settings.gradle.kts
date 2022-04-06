@@ -1,2 +1,2 @@
 
-rootProject.name="profile"
+rootProject.name = "profile"

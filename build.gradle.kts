@@ -43,8 +43,8 @@ dependencies {
     implementation("io.micronaut.security:micronaut-security")
     implementation("io.micronaut.sql:micronaut-jdbc-hikari")
     implementation("jakarta.annotation:jakarta.annotation-api")
-    implementation("org.jetbrains.kotlin:kotlin-reflect:${kotlinVersion}")
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:${kotlinVersion}")
+    implementation("org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion")
     runtimeOnly("ch.qos.logback:logback-classic")
     runtimeOnly("io.r2dbc:r2dbc-postgresql")
     runtimeOnly("org.postgresql:postgresql")
@@ -64,7 +64,6 @@ dependencies {
     implementation("org.apache.avro:avro:1.11.0")
     implementation("io.confluent:kafka-avro-serializer:7.0.1")
 }
-
 
 application {
     mainClass.set("com.goblin.ApplicationKt")
@@ -94,5 +93,3 @@ micronaut {
         annotations("com.goblin.*")
     }
 }
-
-
