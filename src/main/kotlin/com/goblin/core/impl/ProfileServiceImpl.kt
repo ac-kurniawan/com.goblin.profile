@@ -7,7 +7,7 @@ import com.goblin.core.ProfileService
 import com.goblin.utils.MessagePayload
 import io.opentelemetry.extension.annotations.WithSpan
 import jakarta.inject.Singleton
-import java.util.*
+import java.util.UUID
 
 @Singleton
 class ProfileServiceImpl(

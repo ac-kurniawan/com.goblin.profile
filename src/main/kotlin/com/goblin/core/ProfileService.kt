@@ -1,6 +1,6 @@
 package com.goblin.core
 
-import java.util.*
+import java.util.UUID
 
 interface ProfileService {
     fun createProfile(data: Profile): Profile

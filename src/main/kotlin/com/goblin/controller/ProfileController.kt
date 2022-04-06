@@ -16,7 +16,7 @@ import io.micronaut.security.rules.SecurityRule
 import io.opentelemetry.api.trace.SpanKind
 import io.opentelemetry.extension.annotations.SpanAttribute
 import io.opentelemetry.extension.annotations.WithSpan
-import java.util.*
+import java.util.UUID
 
 @Secured(SecurityRule.IS_ANONYMOUS)
 @Controller("/profile")
