@@ -4,5 +4,4 @@ import com.goblin.core.ProfileRepository
 import io.micronaut.data.annotation.Repository
 
 @Repository
-interface ProfileRepositoryImpl : ProfileRepository {
-}
+interface ProfileRepositoryImpl : ProfileRepository
