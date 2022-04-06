@@ -24,7 +24,7 @@ data class CreateProfileRequest(
 
     @field:JsonProperty("zipcode", required = true)
     val zipcode: String,
-    ) {
+) {
     fun toEntity(): Profile {
         return Profile(
             firstName = firstName,

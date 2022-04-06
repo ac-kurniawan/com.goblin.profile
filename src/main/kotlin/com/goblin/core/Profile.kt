@@ -6,7 +6,12 @@ import org.hibernate.annotations.UpdateTimestamp
 import java.time.Instant
 import java.time.LocalDateTime
 import java.util.*
-import javax.persistence.*
+import javax.persistence.Column
+import javax.persistence.Entity
+import javax.persistence.GeneratedValue
+import javax.persistence.Id
+import javax.persistence.Table
+import javax.persistence.Version
 
 @Entity
 @Table(name = "profile")

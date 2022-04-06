@@ -3,8 +3,6 @@ package com.goblin.controller.Dto
 import com.fasterxml.jackson.annotation.JsonFormat
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.goblin.core.Profile
-import java.time.Instant
-import java.time.LocalDate
 import java.time.LocalDateTime
 import java.time.ZoneOffset
 import java.util.*
@@ -45,8 +43,8 @@ data class ProfileResponse(
     @field:JsonProperty("deletedAt")
     @field:JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd hh:mm:ss")
     var deletedAt: LocalDateTime? = null,
-    )
+)
 
 fun Profile.toDto() = ProfileResponse(
-    id, firstName, lastName, address, country, province, city,zipcode, createdAt = LocalDateTime.ofInstant(createdAt, ZoneOffset.UTC), updatedAt = LocalDateTime.ofInstant(updatedAt, ZoneOffset.UTC), deletedAt
+    id, firstName, lastName, address, country, province, city, zipcode, createdAt = LocalDateTime.ofInstant(createdAt, ZoneOffset.UTC), updatedAt = LocalDateTime.ofInstant(updatedAt, ZoneOffset.UTC), deletedAt
 )

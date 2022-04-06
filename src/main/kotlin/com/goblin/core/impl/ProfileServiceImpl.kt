@@ -5,7 +5,6 @@ import com.goblin.core.ProfileProducer
 import com.goblin.core.ProfileRepository
 import com.goblin.core.ProfileService
 import com.goblin.utils.MessagePayload
-import io.opentelemetry.api.trace.SpanKind
 import io.opentelemetry.extension.annotations.WithSpan
 import jakarta.inject.Singleton
 import java.util.*
@@ -14,7 +13,7 @@ import java.util.*
 class ProfileServiceImpl(
     private val profileRepository: ProfileRepository,
     private val profileProducer: ProfileProducer
-) : ProfileService{
+) : ProfileService {
     @WithSpan
     override fun createProfile(data: Profile): Profile {
         val result = this.profileRepository.save(data)
@@ -25,7 +24,7 @@ class ProfileServiceImpl(
 
     @WithSpan
     override fun getProfileById(id: UUID): Profile {
-        val result = this.profileRepository.findById(id)?: throw Exception("Not found")
+        val result = this.profileRepository.findById(id) ?: throw Exception("Not found")
         return result
     }
 
