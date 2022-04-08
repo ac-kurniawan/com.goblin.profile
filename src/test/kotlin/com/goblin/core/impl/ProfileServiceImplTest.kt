@@ -1,27 +1,21 @@
 package com.goblin.core.impl
 
+import com.goblin.core.ProfileProducer
+import com.goblin.core.ProfileRepository
+import io.micronaut.test.extensions.junit5.annotation.MicronautTest
 import org.junit.jupiter.api.BeforeEach
-import org.junit.jupiter.api.Test
+import org.mockito.Mockito
 
-internal class ProfileServiceImplTest {
+@MicronautTest
+open class ProfileServiceImplTest {
+
+    val mockProfileRepository: ProfileRepository = Mockito.mock(ProfileRepository::class.java)
+    val mockProducer: ProfileProducer = Mockito.mock(ProfileProducer::class.java)
+
+    lateinit var profileServiceImpl: ProfileServiceImpl
 
     @BeforeEach
     fun setUp() {
-    }
-
-    @Test
-    fun createProfile() {
-    }
-
-    @Test
-    fun getProfileById() {
-    }
-
-    @Test
-    fun deleteProfileById() {
-    }
-
-    @Test
-    fun manageProfileCreated() {
+        profileServiceImpl = ProfileServiceImpl(mockProfileRepository, mockProducer)
     }
 }
