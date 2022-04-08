@@ -85,6 +85,11 @@ tasks {
             jvmTarget = "11"
         }
     }
+    test {
+        testLogging {
+            showStandardStreams = true
+        }
+    }
 }
 graalvmNative.toolchainDetection.set(false)
 micronaut {
