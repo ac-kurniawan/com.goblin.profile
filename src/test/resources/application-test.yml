@@ -1,25 +1,25 @@
 #r2dbc.datasources.default.url: r2dbc:tc:postgresql:///postgres?TC_IMAGE_TAG=12-alpine
-datasources:
-  default:
-    url: jdbc:tc:postgresql:12://localhost:5432/postgres
-    driverClassName: org.testcontainers.jdbc.ContainerDatabaseDriver
-    username: username
-    password: password
-    schema-generate: NONE
-    dialect: POSTGRES
-
-flyway:
-  datasources:
-    default:
-      enabled: true
-netty:
-  default:
-    allocator:
-      max-order: 3
-jpa:
-  default:
-    properties:
-      hibernate:
-        hbm2ddl:
-          auto: none
-        show_sql: true
+#datasources:
+#  default:
+#    url: jdbc:tc:postgresql:12://localhost:5432/postgres
+#    driverClassName: org.testcontainers.jdbc.ContainerDatabaseDriver
+#    username: username
+#    password: password
+#    schema-generate: NONE
+#    dialect: POSTGRES
+#
+#flyway:
+#  datasources:
+#    default:
+#      enabled: true
+#netty:
+#  default:
+#    allocator:
+#      max-order: 3
+#jpa:
+#  default:
+#    properties:
+#      hibernate:
+#        hbm2ddl:
+#          auto: none
+#        show_sql: true

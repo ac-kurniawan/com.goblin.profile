@@ -12,3 +12,30 @@ micronaut:
           secret:
             generator:
               secret: '"${JWT_GENERATOR_SIGNATURE_SECRET:test}"'
+datasources:
+  default:
+    url: jdbc:postgresql://localhost:5432/postgres
+    driverClassName: org.postgresql.Driver
+    username: username
+    password: password
+    schema-generate: NONE
+    dialect: POSTGRES
+    minimumIdle: 100
+    maximumPoolSize: 10
+    idleTimeout: 3600000
+    maxLifetime: 300000
+flyway:
+  datasources:
+    default:
+      enabled: true
+netty:
+  default:
+    allocator:
+      max-order: 3
+jpa:
+  default:
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: none
+        show_sql: true
