@@ -1,6 +1,6 @@
-package integrationTest.com.goblin.core.impl
+package com.goblin.integrationTest.com.goblin.core.impl
 
-import integrationTest.utils.PsqlContainer
+import com.goblin.integrationTest.utils.PsqlContainer
 import io.micronaut.test.extensions.junit5.annotation.MicronautTest
 import org.junit.Test
 import org.junit.jupiter.api.AfterAll

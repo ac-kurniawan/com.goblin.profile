@@ -1,4 +1,4 @@
-package integrationTest.utils
+package com.goblin.integrationTest.utils
 
 import org.testcontainers.containers.PostgreSQLContainer
 import org.testcontainers.junit.jupiter.Testcontainers
