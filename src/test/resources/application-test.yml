@@ -1,4 +1,4 @@
-r2dbc.datasources.default.url: r2dbc:tc:postgresql:///db?TC_IMAGE_TAG=12
+r2dbc.datasources.default.url: r2dbc:tc:postgresql:///postgres?TC_IMAGE_TAG=12
 datasources:
   default:
     url: jdbc:tc:postgresql:12:///postgres
