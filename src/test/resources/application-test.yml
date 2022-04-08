@@ -1,7 +1,7 @@
 #r2dbc.datasources.default.url: r2dbc:tc:postgresql:///postgres?TC_IMAGE_TAG=12-alpine
 datasources:
   default:
-    url: jdbc:tc:postgresql://localhost:5432/postgres
+    url: jdbc:tc:postgresql:12://localhost:5432/postgres
     driverClassName: org.testcontainers.jdbc.ContainerDatabaseDriver
     username: username
     password: password

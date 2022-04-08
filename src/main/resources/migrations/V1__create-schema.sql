@@ -11,7 +11,7 @@ create table profile
     city VARCHAR(255) not null,
     zipcode VARCHAR(255) not null,
     created_at TIMESTAMPTZ not null default NOW(),
-    updated_at TIMESTAMPTZ not null default NOW(),
-   	deleted_at TIMESTAMPTZ not null default NOW(),
+    updated_at TIMESTAMPTZ,
+   	deleted_at TIMESTAMPTZ,
     version INT not null default 0
 );
