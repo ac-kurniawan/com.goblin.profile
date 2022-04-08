@@ -21,6 +21,8 @@ class ProfileServiceImplTest {
     companion object {
         val psqlContainer = PostgresContainer("postgres:12-alpine").apply {
             withDatabaseName("postgres")
+            withUsername("username")
+            withPassword("password")
             withInitScript("migrations/V1__create-schema.sql")
         }
     }
