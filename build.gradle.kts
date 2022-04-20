@@ -25,6 +25,8 @@ dependencies {
     implementation("io.micronaut.data:micronaut-data-jdbc")
     implementation("io.micronaut.sql:micronaut-hibernate-jpa")
     implementation("io.micronaut.sql:micronaut-jdbc-hikari")
+    implementation("org.junit.jupiter:junit-jupiter:5.8.2")
+    testImplementation("org.mockito:mockito-core:4.3.1")
     kapt("io.micronaut:micronaut-http-validation")
     kapt("io.micronaut.data:micronaut-data-processor")
     kapt("io.micronaut.security:micronaut-security-annotations")
@@ -69,18 +71,23 @@ application {
     mainClass.set("com.goblin.ApplicationKt")
 }
 java {
-    sourceCompatibility = JavaVersion.toVersion("11")
+    sourceCompatibility = JavaVersion.toVersion("17")
 }
 
 tasks {
     compileKotlin {
         kotlinOptions {
-            jvmTarget = "11"
+            jvmTarget = "17"
         }
     }
     compileTestKotlin {
         kotlinOptions {
-            jvmTarget = "11"
+            jvmTarget = "17"
+        }
+    }
+    test {
+        testLogging {
+            showStandardStreams = true
         }
     }
 }
